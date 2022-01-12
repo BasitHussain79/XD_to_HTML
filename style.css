@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5% /* 1rem = 10px */;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* utility classes */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-spacebetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-4-col {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-3-col {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1rem;
+    /* justify-content: start; */
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+        width: 23rem;
+        padding: 1rem 1.3rem;
+        background-color: #111111;
+        border-radius: 0.4rem;
+        border: none;
+        font-size: 1.6rem;
+}
+
+.search-input::placeholder{
+    color: #fff;
+}
+
+.perfect-circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.primary-btn {
+    color: #fff;
+    background-color: #B700C4;
+    padding: 0.7rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* navbar */
+#navbar {
+  margin-top: 8.8rem;
+}
+
+#navbar .logo h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#navbar ul {
+}
+
+#navbar ul li {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+#navbar ul li:last-child {
+    margin-right: 0;
+}
+/* navbar end */
+
+/* sec1 start */
+.section {
+    background-color: #232222;
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+}
+
+.main-heading h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.section .section-navbar ul li{
+    margin-right: 2rem;
+}
+
+.section .section-navbar ul li:last-child {
+    margin-right: 0;
+    position: relative;
+}
+
+.section .section-navbar ul li button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0.63rem;
+    right: 1rem;
+}
+
+/* box style */
+.box {
+    width: 30rem;
+    height: 13rem;
+    background-color: #111111;
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.import {
+    width: 37rem;
+    height: 15rem;
+}
+
+.import .circle {
+    background-color: transparent !important;
+}
+
+.import .circle img {
+    margin-left: 10.5rem;
+    height: 130%;
+}
+
+.import .content {
+    margin-left: 3rem;
+}
+
+.box .circle {
+    background-color: #A2FF00;
+    width: 8.5rem;
+    height: 8.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .import .circle img {
+    height: 100px;
+} */
+
+.box h4, h5 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+/* .box .circle {
+    background: url('./img/dummy.png');
+} */
+
+.box .link {
+    margin-top: 1rem;
+}
+
+.box .btn-1 {
+    background-color: #A2FF00;
+    border-radius: 0.4rem 0.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #111111;
+}
+
+.box .btn-2 {
+    background-color: #FFA136;
+    margin-left: 0.5rem;
+}
+/* box style end */
+
+/* section 1 hover */
+.section .box:hover {
+    border: 2px solid #A2FF00;
+}
+
+/* sec1 end */
+
+/* section 2 hover */
+.sec-2 .box:hover {
+    border: 2px solid #FFA136;
+}
+
+/* responsive design */
+@media screen and (max-width: 768px) {
+    .flex-spacebetween {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        margin-top: 2rem;
+    }
+}
+
+/* responsive design */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    
+    .box .circle img {
+        height: 9rem !important;
+    }
+
+    .box .circle .icon {
+        height: 5rem !important;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    html {
+        font-size: 40%;
+    }
+
+    .import .circle img {
+        margin-left: 10.5rem;
+        height: 130%;
+    }
+}
